@@ -46,12 +46,13 @@
 
 <body>
 	<!-- Navigation -->
-	{% if page_number > 1 %}
+	{% if page_number >= 1 %}
     <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
         <div class="container-fluid">
             <!-- Brand and toggle get grouped for better mobile display -->
             <div class="navbar-header page-scroll">
                 <a class="navbar-brand" href="{{ base_url }}">Home</a>
+                <a class="navbar-brand" href='{{ "tags"|link }}'>Tags</a>
             </div>
 
             <!-- /.navbar-collapse -->
@@ -132,7 +133,7 @@
                         </li>
 					{% endfor %}
                     </ul>
-                    <p class="copyright text-muted">Copyright &copy; {{ site_title }} 2016</p>
+                    <p class="copyright text-muted">Copyright &copy; {{ site_title }} 2019</p>
                 </div>
             </div>
         </div>
