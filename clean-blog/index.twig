@@ -91,7 +91,8 @@
                                     {{ page.description }}
                                 </h3>
                             </a>
-                            <p class="post-meta">Posted by {{ page.author }} on {{ page.date }}</p>
+                            {% set tags=page.meta.tags|split(',')%}
+                            <p class="post-meta">Posted by {{ page.author }} on {{ page.date }} in {% for tag in tags %}<a href={{tag|spaceless|link}}>{{tag|spaceless}}{%if tag in tags|slice(0,tags|length-1)%}, {%endif%}</a>{% endfor %}</p>
                         </div>
                         <hr>
                     {% endfor %}
