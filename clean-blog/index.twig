@@ -82,6 +82,7 @@
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                 {% if paged_pages %}
                     {% for page in paged_pages|sort_by("time")|reverse %}
+                    {% if not page.hidden %}
                         <div class="post-preview">
                             <a href="{{ page.url }}">
                                 <h2 class="post-title">
@@ -95,6 +96,7 @@
                             <p class="post-meta">Posted by {{ page.author }} on {{ page.date }} in {% for tag in tags %}<a href={{tag|spaceless|link}}>{{tag|spaceless}}{%if tag in tags|slice(0,tags|length-1)%}, {%endif%}</a>{% endfor %}</p>
                         </div>
                         <hr>
+                    {% endif %}
                     {% endfor %}
                 {% endif %}
                 <!-- Pager -->
