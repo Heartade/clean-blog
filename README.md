@@ -1,6 +1,5 @@
-# Clean-Blog
-A clean, Bootstrap blog theme for Pico CMS Designed by [Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/).
-Forked by Heartade to add support for [Pico-Tags](https://github.com/PontusHorn/Pico-Tags).
+# Purity
+A clean, Bootstrap blog theme for Pico CMS. A fork of [Start Bootstrap](http://startbootstrap.com/template-overviews/clean-blog/), ported by [@BesrourMS](https://github.com/BesrourMS) for Pico.
 
 ## Installation
 Download the clean-blog folder, upload it in the themes folder of your pico installation and change the following setting within your config.php:
@@ -20,6 +19,8 @@ For the pagination I use [Pico Pagination Plugin](https://github.com/rewdy/Pico-
 ```sh
 $config['pagination_limit'] = 4;
 ```
+
+For the tags I use [Pico-Tags](https://github.com/PontusHorn/Pico-Tags).
 
 ### Home Page & Post Page
 Copy index.md, tags.md and post.md from content-sample to your content folder and change the meta data.
