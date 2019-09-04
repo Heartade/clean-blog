@@ -28,7 +28,7 @@
     <link href="{{ theme_url }}/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="{{ theme_url }}/css/clean-blog.min.css" rel="stylesheet">
+    <link href="{{ theme_url }}/css/clean-blog.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
     <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -93,20 +93,6 @@
                         </div>
                         <hr>
                     {% endfor %}
-                <!-- Pager -->
-                <ul class="pager">
-					{% if page_number > 1 %}
-					<li class="previous">
-                        <a href="{{ base_url }}/{{ page_indicator }}/{{ page_number - 1 }}">&larr; Newer Posts</a>
-                    </li>
-					{% endif %}
-					
-					{% if page_number < total_pages %} 
-                    <li class="next">
-                        <a href="{{ base_url }}/{{ page_indicator }}/{{ page_number + 1 }}">Older Posts &rarr;</a>
-                    </li>
-					{% endif %}
-                </ul>
             </div>
         </div>
     </div>
